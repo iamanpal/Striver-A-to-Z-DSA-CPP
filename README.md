@@ -1,9 +1,5 @@
 # Striver-A-to-Z-DSA-CPP
 My DSA learning using C++
-
-
-# Striver A2Z DSA - C++
-
 This repository contains my Data Structures and Algorithms practice using C++.
 
 # Goals
