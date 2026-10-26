@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter number : ";
+    cin >> n;
+    vector <int> v;
+    cout << "Divisors are : " << endl;
+
+    //This method took O(N) Time complexity.
+    // for ( int i = 1; i <= n; i++) {
+    //     if (n % i== 0) cout << i << endl;
+    // }
+
+   // Optimized approach: find divisors in pairs
+// Loop TC = O(sqrt(N)) + O(Nlog(N))
+    for ( int i = 1; i <= sqrt(n); i++) {
+        if (n % i== 0){
+            v.push_back(i);
+            if (n/i != i) v.push_back(n/i);
+        } 
+    }
+
+    sort(v.begin(), v.end()); //TC = Nlog(N) here n is no. of divisors
+    
+    // TC = O(n)
+    for (auto it : v) {
+        cout << it <<  endl;
+    }
+
+    return 0;
+}
