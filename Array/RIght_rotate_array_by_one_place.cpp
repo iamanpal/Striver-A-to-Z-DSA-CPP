@@ -1,12 +1,12 @@
 // # OPTIMAL APPROACH
 // TC = O(N)
-// SPACE COMPLEXITY - FOR EXTRA SPACE = O(1) , FOR TO SOLVE THIS PROBLEM AND  USING THE GIVEN ARRAY SC IS O(N)
+// SPACE COMPLEXITY - FOR AUXILIARY SPACE = O(1) , FOR TO SOLVE THIS PROBLEM AND  USING THE GIVEN ARRAY SC IS O(N)
 
 #include <bits/stdc++.h>
 using namespace std;
 
 void rotate_array(int n,  int arr[]) {
-    if (n <= 1) { //EDGE  CASE IF ARRAY SIZE IS 1.
+    if (n <= 1) { //EDGE  CASE IF ARRAY SIZE IS 1 OR ARRAY IS EMPTY.
         return;
     }
     int temp = arr[n-1];
