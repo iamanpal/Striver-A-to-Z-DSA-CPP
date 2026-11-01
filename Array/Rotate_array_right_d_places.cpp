@@ -59,7 +59,7 @@ int main() {
     return 0;
 }
 
-//OPTIMAL APPROACH
+// # OPTIMAL APPROACH
 // TC = O(n)
 // SC = O(1) — Auxiliary Space
 
