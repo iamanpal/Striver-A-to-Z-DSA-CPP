@@ -88,3 +88,82 @@
 
 //     return 0;
 // }
+
+// OPTIMAL APPROACH (By using sum formula)
+// TC = O(N)
+// Auxiliary SC = O(1)
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int missing_number(int  n,  int arr[]){
+//  int sum = n*(n+1)/2;
+//     int  array_sum = 0;
+//     for (int i = 0; i < n; i++) {
+//         array_sum += arr[i];
+//     }
+//     int  result = sum - array_sum ;
+
+//     return  result;
+    
+// }
+// int main() {
+//     int n;
+//     cout << "Enter size of array : ";
+//     cin >> n;
+
+//     int arr[n];
+
+//     for (int i = 0; i < n; i++) {
+//         cout << "Enter " << i << " Element : ";
+//         cin >> arr[i];
+//     }
+
+
+
+//     cout << "missing  number is  : " << missing_number(n,arr);
+
+//     return 0;
+// }
+
+// OPTIMAL APPROACH (XOR)
+// TC = O(N) + O(N) = O(N)
+// Auxiliary SC = O(1)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int missing_number(int n, int arr[]) {
+    int XOR1 = 0;
+    int XOR2 = 0;
+    int XOR = 0;
+
+    for (int i = 1; i <= n; i++) {
+        XOR1 = XOR1 ^ i;
+    }
+
+    for (int i = 0; i < n - 1; i++) {
+        XOR2 = XOR2 ^ arr[i];
+    }
+
+    XOR = XOR1 ^ XOR2;
+
+    return XOR;
+}
+
+int main() {
+    int n;
+    cout << "Enter size of array : ";
+    cin >> n;
+
+    int arr[n];
+
+    for (int i = 0; i < n - 1; i++) {
+        cout << "Enter " << i << " Element : ";
+        cin >> arr[i];
+    }
+
+    cout << "Missing number is : " << missing_number(n, arr);
+
+    return 0;
+}
