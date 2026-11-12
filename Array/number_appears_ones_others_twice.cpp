@@ -1,3 +1,41 @@
+// BRUTE FORCE APPROACH
+// TC = O(N * N) = O(N^2)
+// Auxiliary SC = O(1)
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// int appear_once(int  n, int  arr[]) {
+//     for (int i = 0; i < n; i++){
+//         int num = arr[i];
+//         int  cnt = 0;
+//         for (int j = 0; j < n; j++){
+//             if (arr[j] == num){
+//                 cnt++;
+//             }
+//         }
+//         if(cnt == 1) return num;
+//     }
+//     return  -1;
+// }
+
+// int main() {
+//     int n;
+//     cout << "Enter size of array : ";
+//     cin >> n;
+
+//     int arr[n];
+
+//     for (int i = 0; i < n; i++) {
+//         cout << "Enter " << i << " Element : ";
+//         cin >> arr[i];
+//     }
+    
+//     cout << "Number appears once is " << appear_once(n,arr);
+
+
+//     return 0;
+// }
+
 // BRUTE FORCE APPROACH (Hashing)
 // TC = O(N + MAX)
 // SC = O(MAX)
@@ -88,6 +126,7 @@
 // TC = O(N)
 // SC = O(1)
 // XOR of two same numbers is always 0
+
 #include <bits/stdc++.h>
 using namespace std;
 
